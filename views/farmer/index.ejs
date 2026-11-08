@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>KnitKraft</title>
+    <meta name="description" content="Knitkraft HTML Mobile Template" />
+    <meta
+      name="keywords"
+      content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/favicon.png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/icon/192x192.png"
+    />
+    <link rel="stylesheet" href="assets/css/weather.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="manifest" href="__manifest.json" />
+  </head>
+  <body>
+    <!-- loader -->
+    <div id="loader">
+      <img src="assets/img/loading-icon.png" alt="icon" class="loading-icon" />
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader bg-primary text-light">
+      <div class="left">
+        <a
+          href="#"
+          class="headerButton"
+          data-bs-toggle="modal"
+          data-bs-target="#sidebarPanel"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </a>
+      </div>
+      <div class="pageTitle">
+        <img src="assets/img/logo.png" alt="logo" class="logo" />
+      </div>
+      <div class="right">
+        <a href="app-notifications.html" class="headerButton">
+          <ion-icon class="icon" name="notifications-outline"></ion-icon>
+          <span class="badge badge-danger">4</span>
+        </a>
+        <a href="./overview/profile.html" class="headerButton">
+          <img
+            src="assets/img/sample/avatar/avatar1.jpg"
+            alt="image"
+            class="imaged w32"
+          />
+          <span class="badge badge-danger">6</span>
+        </a>
+      </div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+      <!-- Wallet Card -->
+      <div class="section wallet-card-section pt-1">
+        <div class="wallet-card">
+          <!-- Balance -->
+          <div class="balance">
+            <div class="left">
+              <span class="title">Total Balance</span>
+              <h1 class="total">₹2,5612.50</h1>
+            </div>
+            <div class="right">
+              <a
+                href="#"
+                class="button"
+                data-bs-toggle="modal"
+                data-bs-target="#DialogIconedweather"
+              >
+                <ion-icon name="rainy-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+          <!-- * Balance -->
+
+          <!-- Wallet Footer -->
+          <div class="wallet-footer">
+            <div class="item">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#withdrawActionSheet"
+              >
+                <div class="icon-wrapper bg-danger">
+                  <ion-icon name="arrow-down-outline"></ion-icon>
+                </div>
+                <strong>Withdraw</strong>
+              </a>
+            </div>
+            <div class="item">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#sendActionSheet"
+              >
+                <div class="icon-wrapper">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+                <strong>Send</strong>
+              </a>
+            </div>
+            <div class="item">
+              <a href="../Pages/orders.ejs">
+                <div class="icon-wrapper bg-success">
+                  <ion-icon name="card-outline"></ion-icon>
+                </div>
+                <strong>Your Orders</strong>
+              </a>
+            </div>
+            <!-- <div class="item">
+                        
+                    </div> -->
+          </div>
+          <!-- * Wallet Footer -->
+        </div>
+      </div>
+      <!-- Wallet Card -->
+
+      <!-- DialogIconedweather -->
+      <div
+        class="modal fade dialogbox"
+        id="DialogIconedweather"
+        data-bs-backdrop="static"
+        tabindex="-1"
+        role="dialog"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <!--
+Credit to https://dribbble.com/shots/2350761-Weather-app-illustration for the design
+-->
+
+            <div class="container">
+              <div class="bg night_bg"></div>
+              <div class="bg frosty_bg"></div>
+              <div class="bg sunny_bg"></div>
+              <div class="text_container">
+                <div class="degrees"><span>&ordm;</span></div>
+                <div class="place"></div>
+                <div class="weather"></div>
+              </div>
+              <div class="circle_container">
+                <div class="circle"></div>
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+              </div>
+              <div class="ground1 ground1_night"></div>
+              <div class="ground1 ground1_frosty"></div>
+              <div class="ground1 ground1_sunny"></div>
+              <div class="ground2 ground2_night"></div>
+              <div class="ground2 ground2_frosty"></div>
+              <div class="ground2 ground2_sunny"></div>
+            </div>
+            <div class="modal-footer">
+              <div class="btn-inline">
+                <a href="#" class="btn" data-bs-dismiss="modal">CLOSE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * DialogIconedweather -->
+      <!-- weather update -->
+
+      <!-- Deposit Action Sheet -->
+      <div
+        class="modal fade action-sheet"
+        id="depositActionSheet"
+        tabindex="-1"
+        role="dialog"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add Balance</h5>
+            </div>
+            <div class="modal-body">
+              <div class="action-sheet-content">
+                <form>
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label" for="account1">From</label>
+                      <select class="form-control custom-select" id="account1">
+                        <option value="0">Savings (*** 5019)</option>
+                        <option value="1">Investment (*** 6212)</option>
+                        <option value="2">Mortgage (*** 5021)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <label class="label">Enter Amount</label>
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addona1">$</span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter an amount"
+                        value="100"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-block btn-lg"
+                      data-bs-dismiss="modal"
+                    >
+                      Deposit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Deposit Action Sheet -->
+
+      <!-- Withdraw Action Sheet -->
+      <div
+        class="modal fade action-sheet"
+        id="withdrawActionSheet"
+        tabindex="-1"
+        role="dialog"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Withdraw Money</h5>
+            </div>
+            <div class="modal-body">
+              <div class="action-sheet-content">
+                <form>
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label" for="account2d">From</label>
+                      <select class="form-control custom-select" id="account2d">
+                        <option value="0">Savings (*** 5019)</option>
+                        <option value="1">Investment (*** 6212)</option>
+                        <option value="2">Mortgage (*** 5021)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label" for="text11d">To</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="text11d"
+                        placeholder="Enter IBAN"
+                      />
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <label class="label">Enter Amount</label>
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addonb1">$</span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter an amount"
+                        value="100"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-block btn-lg"
+                      data-bs-dismiss="modal"
+                    >
+                      Withdraw
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Withdraw Action Sheet -->
+
+      <!-- Send Action Sheet -->
+      <div
+        class="modal fade action-sheet"
+        id="sendActionSheet"
+        tabindex="-1"
+        role="dialog"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Send Money</h5>
+            </div>
+            <div class="modal-body">
+              <div class="action-sheet-content">
+                <form>
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label" for="account2">From</label>
+                      <select class="form-control custom-select" id="account2">
+                        <option value="0">Savings (*** 5019)</option>
+                        <option value="1">Investment (*** 6212)</option>
+                        <option value="2">Mortgage (*** 5021)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label" for="text11">To</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="text11"
+                        placeholder="Enter bank ID"
+                      />
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <label class="label">Enter Amount</label>
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addon1">$</span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter an amount"
+                        value="100"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-block btn-lg"
+                      data-bs-dismiss="modal"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Send Action Sheet -->
+
+      <!-- Exchange Action Sheet -->
+      <div
+        class="modal fade action-sheet"
+        id="progressActionSheet"
+        tabindex="-1"
+        role="dialog"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Update Progress</h5>
+            </div>
+            <div class="modal-body">
+              <div class="timeline ms-3" id="progressActionSheetBody">
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Exchange Action Sheet -->
+
+      <!-- Stats -->
+      <div class="section">
+        <div class="row mt-2">
+          <div class="col-6">
+            <div class="stat-box">
+              <div class="title">Income</div>
+              <div class="value text-success">₹552.95</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="stat-box">
+              <div class="title">Expenses</div>
+              <div class="value text-danger">₹86.45</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Stats -->
+
+      
+
+      <!-- Progress Timeline -->
+      <div class="section mt-4">
+        <div class="section-heading">
+          <h2 class="title">Progress Timeline</h2>
+          <a href="app-transactions.html" class="link"></a>
+        </div>
+
+        <div class="form-group basic" style="display: flex; justify-content: space-between;">
+          <div class="input-wrapper">
+            <label class="label" for="account2">Select Batch</label>
+            <select class="form-control custom-select" id="account2"  onchange="FillProgressTimeline(this.value)">
+              <option value="0" >B4TIJ(Batch 1)</option>
+              <option value="1" >B8KIJ(Batch 2)</option>
+
+            </select>
+          </div>
+          <a href="../assets/img/certificate.jpeg" id="certDownloadBtn"  type="button" class="btn btn-primary" style="float:right;">
+            View Certificate
+          </a>
+        </div>
+        <div class="card" id="allBadges">
+          <!-- timeline -->
+          <div class="accordion mb-2" id="accordionExample1">
+            <div class="accordion-item">
+              <h2
+                class="accordion-header"
+                style="display: flex; align-items: center; margin-left: 3vw"
+              >
+
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#accordion001"
+                  id="batchName"
+                >
+                  Batch 1 (B4TIJ)
+                </button>
+              </h2>
+              <div
+                id="accordion001"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample1"
+              >
+                <div class="accordion-body">
+                  <div class="timeline ms-3" id="progressTimeline">
+                      ${progressHTML}
+
+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+     
+    </div>
+    <!-- * App Capsule -->
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+      <a href="index" class="item active">
+        <div class="col">
+          <ion-icon name="pie-chart-outline"></ion-icon>
+          <strong>Overview</strong>
+        </div>
+      </a>
+      <a href="./Woolkart" class="item">
+        <div class="col">
+          <ion-icon name="card-outline"></ion-icon>
+          <strong>WoolKart</strong>
+        </div>
+      </a>
+      <a href="./Learning" class="item">
+        <div class="col">
+          <ion-icon name="apps-outline"></ion-icon>
+          <strong>Learnings</strong>
+        </div>
+      </a>
+
+      <a href="./Services" class="item">
+        <div class="col">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <strong>Services</strong>
+        </div>
+      </a>
+      <a href="./Statistics" class="item">
+        <div class="col">
+          <ion-icon name="settings-outline"></ion-icon>
+          <strong>Statistics</strong>
+        </div>
+      </a>
+    </div>
+    <!-- * App Bottom Menu -->
+
+    <!-- App-Sidebar -->
+    <div
+      class="modal fade panelbox panelbox-left"
+      id="sidebarPanel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <!-- profile box -->
+            <div class="profileBox pt-2 pb-2">
+              <div class="image-wrapper">
+                <img
+                  src="assets/img/sample/avatar/avatar1.jpg"
+                  alt="image"
+                  class="imaged w36"
+                />
+              </div>
+              <div class="in">
+                <strong>Sebastian Doe</strong>
+                <div class="text-muted">4029209</div>
+              </div>
+              <a
+                href="#"
+                class="btn btn-link btn-icon sidebar-close"
+                data-bs-dismiss="modal"
+              >
+                <ion-icon name="close-outline"></ion-icon>
+              </a>
+            </div>
+            <!-- * profile box -->
+            <!-- balance -->
+            <div class="sidebar-balance">
+              <div class="listview-title">Balance</div>
+              <div class="in">
+                <h1 class="amount">₹2,562.50</h1>
+              </div>
+            </div>
+            <!-- * balance -->
+
+            <!-- action group -->
+            <div class="action-group">
+              <a href="index.html" class="action-button">
+                <div class="in">
+                  <div class="iconbox">
+                    <ion-icon name="add-outline"></ion-icon>
+                  </div>
+                  Deposit
+                </div>
+              </a>
+              <a href="index.html" class="action-button">
+                <div class="in">
+                  <div class="iconbox">
+                    <ion-icon name="arrow-down-outline"></ion-icon>
+                  </div>
+                  Withdraw
+                </div>
+              </a>
+              <a href="index.html" class="action-button">
+                <div class="in">
+                  <div class="iconbox">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                  Send
+                </div>
+              </a>
+              <a href="app-cards.html" class="action-button">
+                <div class="in">
+                  <div class="iconbox">
+                    <ion-icon name="card-outline"></ion-icon>
+                  </div>
+                  My Cards
+                </div>
+              </a>
+            </div>
+            <!-- * action group -->
+
+            <!-- menu -->
+            <div class="listview-title mt-1">Menu</div>
+            <ul class="listview flush transparent no-line image-listview">
+              <li>
+                <a href="index.html" class="item">
+                  <div class="icon-box bg-primary">
+
+                    <script>
+                      // Add to Home with 2 seconds delay.
+                      // AddtoHome("2000", "once");
+                
+                      // alert(document.cookie)
+                    </script>
+                    <ion-icon name="pie-chart-outline"></ion-icon>
+                  </div>
+                  <div class="in">
+                    Overview
+                    <span class="badge badge-primary">10</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="app-pages.html" class="item">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="document-text-outline"></ion-icon>
+                  </div>
+                  <div class="in">Pages</div>
+                </a>
+              </li>
+              <li>
+                <a href="app-components.html" class="item">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="apps-outline"></ion-icon>
+                  </div>
+                  <div class="in">Components</div>
+                </a>
+              </li>
+              <li>
+                <a href="app-cards.html" class="item">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="card-outline"></ion-icon>
+                  </div>
+                  <div class="in">My Cards</div>
+                </a>
+              </li>
+            </ul>
+            <!-- * menu -->
+
+            <!-- others -->
+            <div class="listview-title mt-1">Others</div>
+            <ul class="listview flush transparent no-line image-listview">
+              <li>
+                <a href="app-settings.html" class="item">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="settings-outline"></ion-icon>
+                  </div>
+                  <div class="in">Settings</div>
+                </a>
+              </li>
+              <li>
+                <a href="component-messages.html" class="item">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                  </div>
+                  <div class="in">Support</div>
+                </a>
+              </li>
+              <li>
+                <a class="item" onclick="logout()">
+                  <div class="icon-box bg-primary">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </div>
+                  <div class="in">Log out</div>
+                </a>
+              </li>
+            </ul>
+            <!-- * others -->
+
+            <!-- send money -->
+            <div class="listview-title mt-1">Send Money</div>
+            <ul class="listview image-listview flush transparent no-line">
+              <li>
+                <a href="#" class="item">
+                  <img
+                    src="assets/img/sample/avatar/avatar2.jpg"
+                    alt="image"
+                    class="image"
+                  />
+                  <div class="in">
+                    <div>Artem Sazonov</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item">
+                  <img
+                    src="assets/img/sample/avatar/avatar4.jpg"
+                    alt="image"
+                    class="image"
+                  />
+                  <div class="in">
+                    <div>Sophie Asveld</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item">
+                  <img
+                    src="assets/img/sample/avatar/avatar3.jpg"
+                    alt="image"
+                    class="image"
+                  />
+                  <div class="in">
+                    <div>Kobus van de Vegte</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- * send money -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- * App Sidebar -->
+
+    <!-- iOS Add to Home Action Sheet -->
+    <div class="modal inset fade action-sheet ios-add-to-home" id="ios-add-to-home-screen" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add to Home Screen</h5>
+                    <a href="#" class="close-button" data-bs-dismiss="modal">
+                        <ion-icon name="close"></ion-icon>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <div class="action-sheet-content text-center" style="min-height: auto">
+
+                        <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">   
+                                   <div>
+
+                                        <div type="button" class="btn btn-primary btn-secondary">welcome to farmers </div>
+                                    </div>
+                                                                                       
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis asperiores numquam quam assumenda tempore amet. Excepturi, eaque debitis dignissimos maiores reprehenderit corrupti quibusdam, quia illo ratione libero quam voluptate laudantium.</p>
+                                 
+                                </div>
+                                <div class="carousel-item">
+                                    <p>                                    2 Lorem ipsum dolor sit amet c onsectetur adipisicing elit. Quisquam, voluptate.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.</p>
+
+                                        <hr>
+                                        <div class="section mt-1 mb-2">
+                                            <div class="section-title">Basic</div>
+                                            <div class="card">
+                                                <!-- timeline -->
+                                                <div class="timeline ms-3">
+                                                    <div class="item">
+                                                        <div class="dot bg-primary"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Payment sent</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="item">
+                                                        <div class="dot"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">KYC Documents</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="dot bg-info"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Your card has been added</h4>
+                                                          
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="dot bg-danger"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Friend Requests</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="dot bg-primary"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Payment sent</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="item">
+                                                        <div class="dot"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">KYC Documents</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="dot bg-info"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Your card has been added</h4>
+                                                          
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="dot bg-danger"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Friend Requests</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="dot bg-primary"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Payment sent</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="item">
+                                                        <div class="dot"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">KYC Documents</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="dot bg-info"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Your card has been added</h4>
+                                                          
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="dot bg-danger"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Friend Requests</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="dot bg-primary"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Payment sent</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="item">
+                                                        <div class="dot"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">KYC Documents</h4>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="dot bg-info"></div>
+                                                        <div class="content">
+                                                            <h4 class="title">Your card has been added</h4>
+                                                          
+                                                        </div>
+                                                    </div>
+                                                  
+                                                </div>
+                                                <!-- * timeline -->
+                                            </div>
+                                        </div>
+
+                                </div>
+                                <!-- <div class="carousel-item">
+                                    1 Lorem ipsum dolor sit amet c onsectetur adipisicing elit. Quisquam, voluptate.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.
+                                </div> -->
+                            </div>
+                           
+                        </div>
+
+                        <div class="mt-2">
+                            <button class="btn btn-primary btn-block" id="carouselNextButton">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: ed8c6549bwf9 -->
+
+                <script>
+                    document.getElementById('carouselNextButton').addEventListener('click', function() {
+                        var carousel = document.getElementById('carouselExampleIndicators');
+                        var activeItem = carousel.querySelector('.carousel-item.active');
+                        var nextItem = activeItem.nextElementSibling;
+
+                        if (nextItem) {
+                            nextItem.classList.add('active');
+                            activeItem.classList.remove('active');
+                        } else {
+                            // Redirect to some page when the last carousel item is reached
+                            window.location.href = '/index.html';
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- * iOS Add to Home Action Sheet -->
+
+
+    <!-- Android Add to Home Action Sheet -->
+  <div class="modal inset fade action-sheet android-add-to-home" id="android-add-to-home-screen" tabindex="-1"
+  role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="height: 80vh;">
+      <div class="modal-header">
+        <h5 class="modal-title">Dear Farmer</h5>
+      </div>
+
+
+      <!-- FILEPATH: /E:/SIH/SIH_2023/frontend/index.html -->
+      <!-- BEGIN: ed8c6549bwf9 -->
+      <div class="modal-body">
+        <div class="action-sheet-content text-center" style="min-height: 68vh">
+
+          <div id="carouselExampleIndicators1" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div>
+
+                  <div type="button" class="btn btn-primary btn-secondary">welcome to farmers
+                  </div>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis asperiores
+                  numquam quam assumenda tempore amet. Excepturi, eaque debitis dignissimos
+                  maiores reprehenderit corrupti quibusdam, quia illo ratione libero quam
+                  voluptate laudantium.</p>
+
+              </div>
+              <div class="carousel-item">
+                <p> 2 Lorem ipsum dolor sit amet c onsectetur adipisicing elit. Quisquam, voluptate.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.
+                </p>
+
+                <hr>
+                <div class="section mt-1 mb-2">
+
+                  <div class="card">
+                    <!-- timeline -->
+                    <div class="timeline ms-3">
+                      <div class="item">
+                        <div class="dot bg-primary"></div>
+                        <div class="content">
+                          <h4 class="title">Payment sent</h4>
+
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="dot"></div>
+                        <div class="content">
+                          <h4 class="title">KYC Documents</h4>
+
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="dot bg-info"></div>
+                        <div class="content">
+                          <h4 class="title">Your card has been added</h4>
+
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="dot bg-danger"></div>
+                        <div class="content">
+                          <h4 class="title">Friend Requests</h4>
+
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="dot bg-primary"></div>
+                        <div class="content">
+                          <h4 class="title">Payment sent</h4>
+
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="dot"></div>
+                        <div class="content">
+                          <h4 class="title">KYC Documents</h4>
+
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="dot bg-info"></div>
+                        <div class="content">
+                          <h4 class="title">Your card has been added</h4>
+
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="dot bg-danger"></div>
+                        <div class="content">
+                          <h4 class="title">Friend Requests</h4>
+
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="dot bg-primary"></div>
+                        <div class="content">
+                          <h4 class="title">Payment sent</h4>
+
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="dot"></div>
+                        <div class="content">
+                          <h4 class="title">KYC Documents</h4>
+
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="dot bg-info"></div>
+                        <div class="content">
+                          <h4 class="title">Your card has been added</h4>
+
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="dot bg-danger"></div>
+                        <div class="content">
+                          <h4 class="title">Friend Requests</h4>
+
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="dot bg-primary"></div>
+                        <div class="content">
+                          <h4 class="title">Payment sent</h4>
+
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="dot"></div>
+                        <div class="content">
+                          <h4 class="title">KYC Documents</h4>
+
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="dot bg-info"></div>
+                        <div class="content">
+                          <h4 class="title">Your card has been added</h4>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- * timeline -->
+                  </div>
+                </div>
+
+              </div>
+              <div class="carousel-item">
+                <!-- App Capsule -->
+
+
+                <div class="section mb-2">
+                  <div class="section-title">Dear farmer name</div>
+                  <div class="card">
+                    <div class="card-body">
+                      <form>
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <!-- Other input fields remain unchanged -->
+                            <label class="label" for="select4b">State</label>
+                            <select class="form-control custom-select" id="select4b">
+                              <!-- Options will be dynamically populated here -->
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label" for="woolSource">Source of
+                              Wool</label>
+                            <select class="form-control custom-select" id="woolSource">
+                              <option value="Sheep">Sheep</option>
+                              <option value="Goat">Goat</option>
+                              <option value="Camel">Camel</option>
+                              <option value="Rabbit">Rabbit</option>
+                              <option value="Llamas">Llamas</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label" for="cattleSize">Cattle
+                              Size</label>
+                            <input type="text" class="form-control" id="cattleSize" placeholder="Cattle Size">
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label">Do You Own a Farm?</label>
+                            <select class="form-control custom-select">
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label">Do You Own a Cattle?</label>
+                            <select class="form-control custom-select">
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label" for="woolProduction">Your Current
+                              Wool Production Quantity Annually in Kg</label>
+                            <input type="text" class="form-control" id="woolProduction"
+                              placeholder="Wool Production Quantity">
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label">Do You Have a Warehouse to Store
+                              Your Wool?</label>
+                            <select class="form-control custom-select">
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label">Where do you sell your
+                              wool?</label>
+                            <select class="form-control custom-select">
+                              <option value="Offline market">Offline Market
+                              </option>
+                              <option value="Dealers/Middleman">Dealers/Middleman
+                              </option>
+                              <option value="Authorized Production Houses">
+                                Authorized Production Houses</option>
+                              <option value="Online Market">Online Market</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label" for="woolType">Type of Wool You
+                              Produce</label>
+                            <input type="text" class="form-control" id="woolType" placeholder="Wool Type">
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label">Do You Have any Wool Quality
+                              Certificate?</label>
+                            <select class="form-control custom-select">
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label">Do You Produce any Merchandise with
+                              Wool?</label>
+                            <select class="form-control custom-select">
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                          <div class="input-wrapper">
+                            <label class="label" for="merchandiseDesc">If yes, what
+                              do you produce?</label>
+                            <input type="text" class="form-control" id="merchandiseDesc"
+                              placeholder="Merchandise Description">
+                          </div>
+                        </div>
+
+                        <!-- Additional fields following the same structure -->
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+
+                <script>
+                  // JavaScript to populate states in the select dropdown
+                  const states = [
+                    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana",
+                    "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur",
+                    "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu",
+                    "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal", "Andaman and Nicobar Islands",
+                    "Chandigarh", "Dadra and Nagar Haveli", "Daman and Diu", "Delhi", "Jammu and Kashmir", "Ladakh",
+                    "Lakshadweep", "Puducherry"
+                  ];
+
+                  // Function to populate the select dropdown with states
+                  function populateStates() {
+                    const selectDropdown = document.getElementById('select4b');
+                    states.forEach(state => {
+                      const option = document.createElement('option');
+                      option.value = state;
+                      option.textContent = state;
+                      selectDropdown.appendChild(option);
+                    });
+                  }
+
+                  // Call the function to populate states when the window loads
+                  window.onload = populateStates;
+                </script>
+
+
+
+
+
+                </form>
+
+
+              </div>
+              <!-- * App Capsule -->
+            </div>
+          </div>
+          <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span> -->
+          </button>
+        </div>
+
+        <div class="mt-2">
+          <button class="btn btn-primary btn-block" id="carouselNextButton1">Next</button>
+        </div>
+      </div>
+    </div>
+    <!-- END: ed8c6549bwf9 -->
+
+    <script>
+      document.getElementById('carouselNextButton1').addEventListener('click', function () {
+        var carousel = document.getElementById('carouselExampleIndicators1');
+        var activeItem = carousel.querySelector('.carousel-item.active');
+        var nextItem = activeItem.nextElementSibling;
+
+        if (nextItem) {
+          nextItem.classList.add('active');
+          activeItem.classList.remove('active');
+        }
+
+        else {
+          // Redirect to some page when the last carousel item is reached
+          window.location.href = '/index.html';
+        }
+      });
+    </script>
+
+
+  </div>
+</div>
+
+<!-- * Android Add to Home Action Sheet -->
+
+
+    <!-- ========= JS Files =========  -->
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+
+    <script>
+        // AddtoHome("2000", "once");
+    </script>
+    <script>
+
+      var PROGRESS_ARRAY = ["Raising livestock", "Shearing", "Skirting & Sorting", "Cleaning", "Carding", "Combing", "Spinnging", "Dyeing", "Weaving", "Finishing", "Ready to ship"]
+      
+      var BATCHES = [
+        {
+          name: "B4TIJ",
+          progress: 3,
+          lastUpdated: 1627776000000,
+        },
+        {
+          name: "B8KIJ",
+          progress: 7,
+          lastUpdated: 1627776000000,
+        },
+        {
+          name: "B9KIM",
+          progress: 4,
+          lastUpdated: 1627776000000,
+        },
+      ]
+      var CERTIFICATES = ["../assets/img/Batch 1.jpg", "../assets/img/Batch 2.jpg"];
+     function FillProgressTimeline(i=0){
+      i = parseInt(i);
+      certDownloadBtn.href = CERTIFICATES[i];
+      batchName.innerHTML = BATCHES[i].name + " (Batch "+(i+1)+")";
+      var progressTimeline = document.getElementById("progressTimeline");
+      progressTimeline.innerHTML = "";
+      const progress = BATCHES[i].progress;
+      var lastUpdated = BATCHES[i].lastUpdated;
+      PROGRESS_ARRAY.forEach((prg,index)=>{
+        
+        progressTimeline.innerHTML += `
+          <div class="item">
+            <div type="radio" class="dot ${
+              index <= progress ? "bg-danger":"bg-secondary"
+            }" ></div>
+            <div class="content">
+              <h4 class="title">${prg}</h4>
+              ${
+                index == progress? `<p class="text-danger">${
+                  lastUpdated?`Last Updated: ${new Date(parseInt(lastUpdated)).toLocaleString()}`:""
+                }</p>`:""
+              }
+            </div>
+          </div>
+          `;
+
+      })
+    }
+    FillProgressTimeline();
+
+    function updateProgress(index){
+      $.ajax({
+        url: "https://knitkraft.onrender.com/api/updateProgress",
+        type: "POST",
+        data: {
+          progress: index,
+          id: getCookie("userID"),
+        },
+        success: function (data) {
+          // set cookie
+          document.cookie = `progress=${index};`+document.cookie;
+          console.log(data);
+          FillProgressTimeline();
+        },
+        error: function (err) {
+          console.log(err);
+        },
+      });
+    }
+    </script>
+
+
+    
+  </body>
+</html>

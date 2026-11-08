@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>Knitkraft</title>
+    <meta name="description" content="Knitkraft HTML Mobile Template" />
+    <meta
+      name="keywords"
+      content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/favicon.png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/icon/192x192.png"
+    />
+    <link rel="stylesheet" href="assets/css/weather.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="manifest" href="__manifest.json" />
+    <style>
+      .date {
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 0.5rem;
+        padding: 0 1rem;
+      }
+      .modal-content {
+        max-height: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- loader -->
+    <div id="loader">
+      <img src="assets/img/loading-icon.png" alt="icon" class="loading-icon" />
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader bg-primary text-light">
+      <div class="left">
+        <a href="#" class="headerButton" onclick="logout()">
+          <ion-icon name="log-out-outline"></ion-icon>
+        </a>
+      </div>
+      <div class="pageTitle">
+        <img src="assets/img/logo.png" alt="logo" class="logo" />
+      </div>
+      <div class="right">
+        <a href="app-notifications.html" class="headerButton">
+          <ion-icon class="icon" name="notifications-outline"></ion-icon>
+          <span class="badge badge-danger">4</span>
+        </a>
+        <a href="./overview/profile.html" class="headerButton">
+          <img
+            src="assets/img/sample/avatar/avatar1.jpg"
+            alt="image"
+            class="imaged w32"
+          />
+          <span class="badge badge-danger">6</span>
+        </a>
+      </div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+      <a
+        data-bs-toggle="modal"
+        data-bs-target="#DialogForm"
+        id="modelShow"
+        style="display: none"
+      ></a>
+
+      <!-- Wallet Card -->
+      <div class="section wallet-card-section pt-1">
+        <div class="wallet-card">
+          <!-- Balance -->
+          <div class="balance">
+            <div class="left">
+              <span class="title"> Earned Yet </span>
+              <h1 class="total">₹2,5612.50</h1>
+            </div>
+            <div class="right">
+              <a
+                href="#"
+                class="button"
+                data-bs-toggle="modal"
+                data-bs-target="#DialogIconedweather"
+              >
+                <ion-icon name="rainy-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+          <!-- * Balance -->
+
+          <!-- Wallet Footer -->
+          <div class="wallet-footer">
+            <div class="item">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#withdrawActionSheet"
+              >
+                <div class="icon-wrapper bg-danger">
+                  <ion-icon name="arrow-down-outline"></ion-icon>
+                </div>
+                <strong>Withdraw</strong>
+              </a>
+            </div>
+            <div class="item">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#sendActionSheet"
+              >
+                <div class="icon-wrapper">
+
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+                <strong>Send</strong>
+              </a>
+            </div>
+            <!-- <div class="item">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exchangeActionSheet">
+                            <div class="icon-wrapper bg-warning">
+                                <ion-icon name="swap-vertical"></ion-icon>
+                            </div>
+                            <strong>Exchange</strong>
+                        </a>
+                    </div> -->
+          </div>
+          <!-- * Wallet Footer -->
+        </div>
+      </div>
+      <!-- Wallet Card -->
+
+      <!-- Withdraw Action Sheet -->
+      <div
+        class="modal fade action-sheet"
+        id="withdrawActionSheet"
+        tabindex="-1"
+        role="dialog"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Withdraw Money</h5>
+            </div>
+            <div class="modal-body">
+              <div class="action-sheet-content">
+                <form>
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label" for="account2d">From</label>
+                      <select class="form-control custom-select" id="account2d">
+                        <option value="0">Savings (*** 5019)</option>
+                        <option value="1">Investment (*** 6212)</option>
+                        <option value="2">Mortgage (*** 5021)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label" for="text11d">To</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="text11d"
+                        placeholder="Enter IBAN"
+                      />
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <label class="label">Enter Amount</label>
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addonb1">$</span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter an amount"
+                        value="100"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-block btn-lg"
+                      data-bs-dismiss="modal"
+                    >
+                      Withdraw
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Withdraw Action Sheet -->
+
+      <!-- Send Action Sheet -->
+      <div
+        class="modal fade action-sheet"
+        id="sendActionSheet"
+        tabindex="-1"
+        role="dialog"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Send Money</h5>
+            </div>
+            <div class="modal-body">
+              <div class="action-sheet-content">
+                <form>
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label" for="account2">From</label>
+                      <select class="form-control custom-select" id="account2">
+                        <option value="0">Savings (*** 5019)</option>
+                        <option value="1">Investment (*** 6212)</option>
+                        <option value="2">Mortgage (*** 5021)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label" for="text11">To</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="text11"
+                        placeholder="Enter bank ID"
+                      />
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <label class="label">Enter Amount</label>
+                    <div class="input-group mb-2">
+                      <span class="input-group-text" id="basic-addon1">$</span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter an amount"
+                        value="100"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group basic">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-block btn-lg"
+                      data-bs-dismiss="modal"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Send Action Sheet -->
+
+      <!-- Stats -->
+      <div class="section">
+        <div class="row mt-2">
+          <div class="col-6">
+            <div class="stat-box">
+              <div class="title">Income</div>
+              <div class="value text-success">₹552.95</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="stat-box">
+              <div class="title">Expenses</div>
+              <div class="value text-danger">₹86.45</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- * Stats -->
+
+      <!-- Transactions -->
+      <div class="section mt-4">
+        <div class="section-heading">
+          <h2 class="title">Orders</h2>
+          <div class="actions">
+            <input
+              type="radio"
+              class="btn-check"
+              name="status"
+              id="pending"
+              autocomplete="off"
+              checked
+              onclick="fillserviceBookings()"
+            />
+            <label
+              class="btn btn-sm btn-rounded btn-outline-primary"
+              for="pending"
+              >Pending</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="status"
+              id="accepted"
+              autocomplete="off"
+              onclick="fillserviceBookings()"
+            />
+            <label
+              class="btn btn-sm btn-rounded btn-outline-primary"
+              for="accepted"
+              >accepted</label
+            >
+          </div>
+        </div>
+        <div class="serviceBookings" id="serviceBookings"></div>
+      </div>
+      <!-- * Transactions -->
+      >
+      <!-- Dialog Box For Each service -->
+      <style>
+        #DialogForm {
+          padding: 10px 5vw;
+        }
+      </style>
+      <div
+        class="modal fade dialogbox"
+        id="DialogForm"
+        data-bs-backdrop="static"
+        tabindex="-1"
+        role="dialog"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Deposit Money</h5>
+            </div>
+            <form id="requestserviceForm" style="padding: 0 2vw">
+              <h5 class="title mb-2">Request for service</h5>
+
+              <div class="form-group boxed">
+                <div class="input-wrapper">
+                  <label class="label" for="fleecetype"
+                    >Type of Fleece :
+                  </label>
+                  <select class="form-control custom-select" id="fleecetype" name="fleeceType" >
+                    <option>Select Fleece</option>
+                    <option value="Lohi">Lohi</option>
+                    <option value="Rampur">Rampur</option>
+                    <option value="Nali">Nali</option>
+                    <option value="Bakharwal">Bakharwal</option>
+                    <option value="Marwari">Marwari</option>
+                    <option value="Patanwadi">Patanwadi</option>
+                    <option value="Cashmere">Cashmere</option>
+                    <option value="Alpaca">Alpaca</option>
+                    <option value="Angora">Angora</option>
+                    <option value="Mohair">Mohair</option>
+                    <option value="Merino">Merino</option>
+                    <option value="Camel">Camel</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group boxed">
+                <div class="input-wrapper">
+                  <label class="label" for="lengthassessment"
+                    >Length Assessment</label
+                  >
+                  <h4>Fiber Length :</h4>
+                  <input
+                    name="fiberLength"
+                    type="number"
+                    class="form-control"
+                    id="fiberlength"
+                    placeholder="Enter Fiber Length in inches"
+                  />
+                  <br />
+                  <h4>Staple Length :</h4>
+                  <input
+                    name="stapleLength"
+                    type="number"
+                    class="form-control"
+                    id="staplelength"
+                    placeholder="Enter Staple Length in inches"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group boxed">
+                <div class="input-wrapper">
+                  <label class="label" for="fineness">Fiber Fineness :</label>
+                  <input
+                    name="fiberFineness"
+                    type="number"
+                    class="form-control"
+                    id="fiberfineness"
+                    placeholder="Enter Fiber Fineness in micrometer"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group boxed">
+                <div class="input-wrapper">
+                  <label class="label" for="fineness">Moisure Content</label>
+                  <h4>A: Mass of dry specimen :</h4>
+                  <input
+                    name="massOfDrySpecimen"
+                    type="number"
+                    class="form-control"
+                    id="undried"
+                    placeholder=""
+
+                  />
+                  <br />
+                  <h4>B: Mass of undried specimen :</h4>
+                  <input
+                    name="massOfUndriedSpecimen"
+                    type="number"
+                    class="form-control"
+                    id="dry"
+                    placeholder=""
+                  />
+                  <br />
+                  <h4>C: Mass of absorbed specimen :</h4>
+                  <input
+                    name="massOfAbsorbedSpecimen"
+                    type="number"
+                    class="form-control"
+                    id="absorbed"
+                    placeholder=""
+                  />
+                  <br />
+                  <!-- <label class="label" id="regainValue">Moisure Regain % : </label>
+                  <label class="label" id="contentValue"
+                    >Moisure Content % :
+                  </label> -->
+                </div>
+              </div>
+
+              <div class="form-group boxed">
+                <div class="input-wrapper">
+                  <label class="label" for="fineness">Fiber Diameter :</label>
+                  <input
+                    name="fiberDiameter"
+                    type="number"
+                    class="form-control"
+                    id="fiberdiameter"
+                    placeholder="Enter Fiber Diameter in mm"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group boxed">
+                <div class="input-wrapper">
+                  <label class="label" for="fineness">Burr Content :</label>
+                  <input
+                    name="burrContent"
+                    type="number"
+                    class="form-control"
+                    id="burr"
+                    placeholder="Enter Burr Content %"
+                  />
+                </div>
+              </div>
+
+
+              <div class="form-group boxed">
+                <div class="input-wrapper">
+                    <label class="label" for="colour">Colour of Fleece :
+                    </label>
+                    <select class="form-control custom-select"
+                        id="colour" name="color" >
+                        <option>Select Colour</option>
+                        <option value="alb">White (ALB)</option>
+                        <option value="ly">Light Yellow (LY)</option>
+                        <option value="my">Medium Yellow (MY)</option>
+                        <option value="hy">Heavy Yellow (HY)</option>
+                        <option value="black">Black</option>
+                        <option value="brown">Brown</option>
+                    </select>
+                </div>
+            </div>
+
+              <p style="text-align: center; margin-top: 1rem">
+                <button
+                  class="btn btn-success btn-sm mb-2"
+                  style="margin: 0 auto"
+                  id="updateBtn"
+                  type="button"
+                  onclick="updateBatch()"
+                >
+                  Update
+                </button>
+                <button
+                  class="btn btn-danger btn-sm mb-2"
+                  style="margin: 0 auto"
+                  onclick="document.getElementById('myModal').style.display = 'none'"
+                >
+                  Cancel
+                </button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- dialog -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      var ALL_service_BOOKINGS = [];
+      $.getJSON(
+        "https://knitkraft.onrender.com/api/getServiceBookings",
+        function (data) {
+          if (data.status == "success") {
+            ALL_service_BOOKINGS = data.service;
+            fillserviceBookings("pending");
+          } else {
+            //console.log("Something went wrong");
+            console.log(data);
+          }
+        }
+      );
+      function fillserviceBookings() {
+        var status = document.querySelector('input[name="status"]:checked').id;
+        $("#serviceBookings").html("");
+        ALL_service_BOOKINGS.forEach((service, index) => {
+          if (service.status != status) return;
+          $("#serviceBookings").append(
+            `
+            <div class="row ">
+                            <div class="col-md-6">
+                                <div class="card mb-3 p-2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Name: ${
+                                          service.name
+                                        }</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Topic Name: ${
+                                          service.serviceType
+                                        }</h6>
+                                        <p class="card-text">Date: ${
+                                          service.serviceDate
+                                        }</p>
+                                        <p class="card-text">Description: ${
+                                          service.message
+                                        }</p>
+                                        <p class="card-text">Batch No: ${
+                                          service.batchNo
+                                        }</p>
+                                        <p class="card-text badge
+                                        ${
+                                          service.status == "pending"
+                                            ? "bg-danger"
+                                            : "bg-success"
+                                        }">Status: ${service.status}</p>
+                                        <input type="text" id="meetResponse" class="form-control" value="${
+                                          service.response
+                                        }" >
+                                        
+                                    </div>
+                                    ${
+                                          service.status == "accepted"
+                                            ? `<button onclick="document.getElementById('modelShow').click();window.farmerId='${
+                                                service.farmerId
+                                            }'; window.batchNo='${service.batchNo}'" class="btn btn-success mb-1" >
+                                                  Give Grade and Finish
+                                              </button>`
+                                            : ""
+                                        }
+                                    <button onclick="updateServiceStatus('${
+                                      service._id
+                                    }',
+                                    'accepted', this.parentElement.querySelector('#meetResponse').value
+                                    )" class="btn btn-primary mb-1" >Approve</button>
+                                    <button onclick="updateServiceStatus('${
+                                      service._id
+                                    }', 'pending', 
+                                        this.parentElement.querySelector('#meetResponse').value
+                                    )" class="btn btn-danger mb-1" >Reject</button>
+                                </div>
+                            </div>
+                </div>
+`
+          );
+        });
+      }
+      function updateServiceStatus(id, status, response) {
+        $.post(
+          "https://knitkraft.onrender.com/api/updateServiceStatus",
+          {
+            id,
+            status,
+            response,
+          },
+          function (data) {
+            if (data.status == "success") {
+             console.log("Updated");
+              location.reload();
+            } else {
+             console.log("Something went wrong");
+              console.log(data);
+            }
+          }
+        );
+      }
+
+      function updateBatch(){
+        location.reload();
+        // var form = document.getElementById("requestserviceForm");
+        // var formData = new FormData(form);
+        // formData.append("farmerId", farmerId);
+        // $.ajax({
+        //   url: `https://knitkraft.onrender.com/api/${farmerId}/${batchNo}/generateCertificate`,
+        //   type: "POST",
+        //   data: formData,
+        //   processData: false,
+        //   contentType: false,
+        //   success: function (data) {
+        //     if (data.status == "success") {
+        //      console.log("Updated");
+        //       location.reload();
+        //     } else {
+        //      console.log("Something went wrong");
+        //       console.log(data);
+        //     }
+        //   },
+        // });
+      }
+    </script>
+    <!-- * App Capsule -->
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+      <a href="index" class="item active">
+        <div class="col">
+          <ion-icon name="pie-chart-outline"></ion-icon>
+          <strong>Overview</strong>
+        </div>
+      </a>
+      <a href="./service/trackProduction" class="item">
+        <div class="col">
+          <ion-icon name="card-outline"></ion-icon>
+          <strong>Track Production</strong>
+        </div>
+      </a>
+    </div>
+    <!-- * App Bottom Menu -->
+
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="assets/js/base.js"></script>
+  </body>
+</html>
