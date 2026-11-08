@@ -1,144 +1,529 @@
-# <p align="center"><img align="center" width="80" src="screenshots/logo.png"/> KnitKraft</p>
-<h2 align="center">Application for monitoring of Wool from Farm to Fabric</h2>
-<hr>
-<h2 align="center">TEAM VIZION : Winner 🏆 Of Smart India Hackathon 2023 (SIH 2023) 🌟</h2>
-<img src="screenshots/sih23.JPG"  width="100%"/>
-<h2 align="center">COMPLETE DESCRIPTION</h2>
+# KnitKraft — Wool Supply Chain Management & Digital Marketplace
 
-### PS ID : SIH1309
+### Connecting Farmers, Suppliers, Service Providers, and Buyers Through One Digital Platform
 
-### Team ID : 3411
+**KnitKraft** is a full-stack, multilingual web application designed to digitize and streamline the wool industry by connecting farmers, buyers, sellers, transportation providers, warehouse operators, quality inspectors, and service providers.
 
-### Idea ID : 11334
+The platform brings together **wool production tracking, marketplace operations, quality assurance, logistics management, service discovery, and educational resources** within a centralized digital ecosystem.
 
-### Ministry : Ministry of Textile, Government of India. 
+Built using **Node.js, Express.js, MongoDB, EJS, Bootstrap, and JavaScript**, KnitKraft demonstrates how modern web technologies can improve coordination, transparency, and accessibility across agricultural and textile supply chains.
 
-### PS Title :
-Application Development for monitoring of Wool from Farm to fabric
-
-### PS Description :
-An App-based solution for the wool sector in India which can have the following features required: 
-1. Wool Market Information: Provides real-time market information on wool prices, trends, and news.
-2. Wool Tracking: Allows users to track the production and transport of their wool from farm to market.
-3. Quality Assurance: Provides a platform for wool producers to ensure the quality of their wool and access to wool grading services.
-4. Wool Storage and Warehousing: Helps farmers store and manage their wool inventory.
-5. Wool Processing: Helps farmers access wool processing services such as shearing, sorting and dyeing.
-6. Wool Trading Platform: Allows wool producers to buy and sell wool directly from other farmers or buyers.
-7. Online Wool Marketplace: Provides a platform for wool producers to sell their wool directly to buyers.
-8. Wool Education and Training: Provides a list of wool producers/artisans region-wise, and state-wise data to provide educational resources and training to help them improve their production, quality, design and marketing skills.
-
-### Idea Title :
-KnitKraft, all in one multilingual app that serves farmers, buyers & sellers in the wool industry.
-
-### Idea Description :
-KnitKraft is a comprehensive platform targeting each and every sector in the wool industry from farmers to processing units to consumers. A farmer (shepherd) can utilise this platform for all kinds of wool management including wool tracking, trading, access to various wool related services, bulk buying and the option to store and transport wool to warehouses. The app is also designed for buyers and sellers allowing them to negotiate, list products and sell it to consumers all throughout the same application. Quality assurance of wool is also provided to ensure authenticity. Facility of live and recorded sessions for farmers are also available to boost the whole industry. This platform also has a statistics section tracking wool prices to allow farmers to sell their products at a maximum profit.
-We also have a solid business model 
-1) ESCROW based payment method between farmers and other parties. 
-2) A fee for Quality Assurance Certification. 
-It’s high time that this unorganised Wool industry be streamlined and bring a huge revolution in the textile industry altogether.
-
-### Abstract/ Summary :
-Among all the Textile Industry, the sector facing the most significant challenge is the Wool Industry due to lack of a well established market. The major problem also lies in the outdated and inadequate pre-and post loom processing facilities and no educational institute for Wool Technology. As researched TEAM VIZION has identified this as a golden opportunity to revitalise the entire industry, from initial stages of sheep rearing to the final fabric creation.
-In summary, KnitKraft is a versatile, role-based application catering to the wool industry's needs. It combines marketplace features, quality assurance, education, and services to empower farmers, buyers, and sellers, offering real-time information and support under one platform.
-Most shepherds in the country rear sheep not by choice, but due to lack of other options. We hope that KnitKraft would be able to envision and bring more people into the wool industry by their own choices, creating new job opportunities and taking our nation a step forward.
-
-### Status :
-We have implemented these features:
-1. A cross-platform support application to streamline the complete process from Sheep Farming to Selling Fabric to consumers.
-2. This same platform provide customised interface as per their user role i.e. Farmers, Service providers, Buyers, Educators, Quality Inspectors, Transportation and Warehouse Partners.
-3. One stop platform for farmers, buyers and all types of service providers with native Multilingual Support.
-4. An efficient, transparent and multichannel platform to ease the process for wool buyers & sellers to discover real-time wool prices, information and market trends with quality assurance.
-5. Real-time tracking of wool from farm to market and providing best buys to farmers through a reverse bidding process.
-6. An integrated educational/ training platform to educate farmers about latest market trends, news and practices to increase wool production.
-
-### Tech Stacks Used :
-⦿ <b>FrontEnd :</b> 
-* [![EJS](https://img.shields.io/badge/ejs-ffffff?style=for-the-badge&logo=ejs&logoColor=90a93a)](https://ejs.co/)
-  [![CSS](https://img.shields.io/badge/css-ffffff?style=for-the-badge&logo=css3&logoColor=235f9e)](https://www.w3schools.com/css/)
-  [![SASS](https://img.shields.io/badge/SASS-ffffff?style=for-the-badge&logo=sass)](https://sass-lang.com/)
-  [![Bootstrap](https://img.shields.io/badge/bootstrap-ffffff?style=for-the-badge&logo=bootstrap)](https://getbootstrap.com/) 
-
-⦿ <b>BackEnd :</b>
-* [![NodeJS](https://img.shields.io/badge/node.js-35495E?style=for-the-badge&logo=nodedotjs&logoColor=69a063)](https://nodejs.org/)
- [![ExpressJS](https://img.shields.io/badge/express.js-35495E?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
-
-⦿ <b>Database :</b>
-* [![MongoDB](https://img.shields.io/badge/mongodb-ffca28?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
-
-⦿ <b>Deployment :</b>
-* [![Render](https://img.shields.io/badge/render-0D0D0D?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)
-
-### Important URLS :
-⭐️ <b>KnitKraft :</b> [Use Mobile Phone for best viewing this Website](https://knitkraft.onrender.com/)
-
-  Some Demo Logins to Test without registering: 
-  1. Farmer - Email: farmer@admin.com  Password: 1234a
-  2. Teacher - Email: teacher@admin.com  Password: 1234a
-  3. Transport - Email: transport@admin.com  Password: 1234a
-
-[<img src="screenshots/download.gif" width="50%"/>](https://knitkraft.onrender.com/)
-
-⭐️ <b>Main PPT :</b> [Click Here to View](https://www.canva.com/design/DAGP_9EsdGI/WQJE7HY9nDG7qmt9gBuDuA/edit)
-
-[<img src="screenshots/finalppt.png"  width="50%"/>](https://www.canva.com/design/DAGP_9EsdGI/WQJE7HY9nDG7qmt9gBuDuA/edit)
-
-⭐️ <b>Video : Understanding KnitKraft</b>
-
-[👇🏻👇🏻👇🏻 Click Below 👇🏻👇🏻👇🏻](https://youtu.be/d0B1yQ7u524)
-
-[![Watch this interactive YouTube video](https://img.youtube.com/vi/d0B1yQ7u524/hqdefault.jpg)](https://youtu.be/d0B1yQ7u524)
-
-⭐️ <b>Initial Pre-Selection Blue Print</b> : [Click Here to View](https://drive.google.com/file/d/1WngMiKF48ZAOP37BUc6nZq6fWnPLF6PT/view?usp=sharing)
-
-⭐️ <b>SIH Template PPT :</b> [Click Here to View](https://drive.google.com/file/d/1BhjldMFYz4rB5Iu3gg36Oxn4-SusAxQG/view?usp=drive_link)
-
-⭐️ <b>As Project Report :</b> [Click Here to View](https://drive.google.com/file/d/1tJvVhpuGaO4L66uNkokVx4RxQ1jWoHHH/view?usp=sharing)
-
-⭐️ <b>Extra : You can also watch our fun VLOG 😅</b>
-
-[👇🏻👇🏻👇🏻 Click Below 👇🏻👇🏻👇🏻](https://youtu.be/kYKLeQ5mnIA)
-
-[![Watch the video](https://img.youtube.com/vi/kYKLeQ5mnIA/mqdefault.jpg)](https://youtu.be/kYKLeQ5mnIA)
-
-<p align="center"><img align="center" src="screenshots/mot.png"  width="18%"/></p>
+**Repository:** [github.com/Mashielkhan/KnitKraft](https://github.com/Mashielkhan/KnitKraft)
 
 ---
 
-## Project Created & Maintained By
+## Project Overview
 
-## :heart: Team Vizion
-1. [Krishna Raj](https://github.com/krishna-raz)
-2. [Ujjwal Raj](https://github.com/uzibytes)
-3. [Rajnish Puri](https://github.com/RajnishPuri)
-4. [Prashant Kumar](https://github.com/PkThunderBolt)
-5. [Himanshu Kumar](https://github.com/I-Himanshu)
-6. [Anamika](https://github.com/Anamika282004)
+The wool industry involves multiple interconnected stages, beginning with livestock farming and continuing through shearing, sorting, grading, processing, transportation, storage, trading, and fabric production.
 
-<b>Team Mentor</b> : [Aman Raj](https://github.com/AshAman999)
+Traditional wool supply chains often face challenges involving fragmented communication, limited pricing transparency, inefficient logistics, inconsistent quality assessment, and restricted access to buyers and essential services.
 
-### Hire Us
-<a href="https://www.linkedin.com/in/iamkrishnaraj/"> <img src="https://img.shields.io/badge/krishna-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a>
-<a href="https://www.linkedin.com/in/uraj/"> <img src="https://img.shields.io/badge/ujjwal-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a>
-<a href="https://www.linkedin.com/in/rajnish-puri-804b11209/"> <img src="https://img.shields.io/badge/rajnish-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a>
-<a href="https://www.linkedin.com/in/pkprashant566/"> <img src="https://img.shields.io/badge/prashant-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a>
-<a href="https://www.linkedin.com/in/i-himanshu/"> <img src="https://img.shields.io/badge/himanshu-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a>
-<a href="https://www.linkedin.com/in/anamika0101/"> <img src="https://img.shields.io/badge/anamika-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a>
+KnitKraft addresses these challenges by providing a unified digital platform where stakeholders can manage activities throughout the wool production and distribution lifecycle.
 
-### How-to-run
+The application uses role-based interfaces to provide different functionality to farmers, service providers, buyers, sellers, educators, transportation partners, warehouse operators, and quality inspectors.
 
-- Download NodeJS from the Official website [link](https://nodejs.org/) (if not installed)
-- Clone this Repository. 
-- Open the cloned repository in VS Code.
-- Enter command - `npm i` to install all the neccessary packages.
-- Then Enter Command - `npm start` to start the application in your local machine.
-- Or you can directly use our application on your phone by accessing this website [link](https://knitkraft.onrender.com/).
+Its goal is to improve supply-chain visibility, simplify wool trading, and support greater participation in the textile economy.
 
-## Support
+---
 
-💙 If you like this project, give it a '⭐' and share it with your friends!
-You are free to send us PRs and issues, We'd love to help and improve this.
+## Key Features
 
-<h1 align="center">🙏 THANK YOU 🙏</h1>
+### 1. Role-Based User Management
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Oldenburg&color=67F7AD&lines=Best+Wishes+from+Team+Vizion)
+KnitKraft provides dedicated interfaces for different participants in the wool industry.
 
+Supported roles include:
+
+- Farmers and shepherds.
+- Wool buyers and sellers.
+- Processing and service providers.
+- Transportation partners.
+- Warehouse operators.
+- Educators and trainers.
+- Quality inspectors.
+
+Role-based access supports personalized workflows according to each participant's responsibilities.
+
+### 2. Wool Production Tracking
+
+Track wool movement and production activities from farm operations through processing and distribution.
+
+The workflow covers activities such as:
+
+- Livestock raising.
+- Shearing.
+- Skirting and sorting.
+- Cleaning.
+- Carding and combing.
+- Dyeing.
+- Weaving.
+- Finishing.
+- Shipping and distribution.
+
+This provides a structured representation of the wool production lifecycle.
+
+### 3. Digital Wool Marketplace
+
+KnitKraft includes a marketplace-oriented environment for wool producers and buyers.
+
+Core capabilities include:
+
+- Wool product listings.
+- Buyer and seller interaction.
+- Product discovery.
+- Order-related interfaces.
+- Buying and selling workflows.
+- Negotiation support.
+
+The marketplace aims to reduce barriers between producers and customers.
+
+### 4. Transportation and Logistics Management
+
+Transportation workflows help coordinate movement of wool between farms, processing locations, warehouses, and buyers.
+
+The application includes dedicated transportation-related interfaces and data models.
+
+### 5. Warehouse and Inventory Services
+
+The warehouse module supports interactions involving wool storage and warehousing.
+
+It provides a foundation for coordinating storage services and managing related requests.
+
+### 6. Quality Assurance and Grading
+
+KnitKraft incorporates wool grading and quality-related service interfaces.
+
+These features are intended to help producers better understand wool quality and connect with relevant assessment services.
+
+### 7. Wool-Related Service Discovery
+
+The platform organizes industry services into dedicated categories.
+
+Examples include:
+
+- Shearing services.
+- Sorting services.
+- Veterinary assistance.
+- Wool grading.
+- Warehouse services.
+- Transportation services.
+- Farm equipment suppliers.
+- Fodder and nutrition services.
+- Insurance-related services.
+- Livestock breeding services.
+- Financial assistance requests.
+
+### 8. Education and Training
+
+KnitKraft includes learning-oriented pages designed to support farmers and other industry participants.
+
+Educational resources can help users understand improved production methods, industry practices, and opportunities for skill development.
+
+### 9. Multilingual User Experience
+
+The project includes English and Hindi language resources.
+
+The multilingual approach is intended to improve accessibility for users with different language preferences.
+
+### 10. Market Statistics and Insights
+
+The application includes a statistics interface for presenting wool-related information.
+
+Market information and statistical features can support more informed business decisions, depending on the data available through the application.
+
+---
+
+## Technology Stack
+
+| Layer          | Technology                                  | Purpose                           |
+| -------------- | ------------------------------------------- | --------------------------------- |
+| Frontend       | HTML5, CSS3, JavaScript                     | User interface                    |
+| Templating     | EJS                                         | Server-rendered pages             |
+| Styling        | Bootstrap, Sass                             | Responsive interface design       |
+| Backend        | Node.js                                     | Server-side runtime               |
+| Web Framework  | Express.js                                  | Routing and application logic     |
+| Database       | MongoDB                                     | Application data storage          |
+| Authentication | JWT-based middleware                        | Authentication and access control |
+| Maps           | Mapbox                                      | Map-related interface integration |
+| Localization   | JSON language resources                     | English and Hindi support         |
+| Deployment     | Render-compatible Node.js app               | Application hosting               |
+| UI Assets      | Bootstrap, Font Awesome, JavaScript plugins | Interface components              |
+
+---
+
+## System Architecture
+
+```text
+                      USERS
+                        |
+                        v
+             +---------------------+
+             |   KNITKRAFT WEB APP |
+             |   EJS + Bootstrap   |
+             |   JavaScript + CSS  |
+             +----------+----------+
+                        |
+                        v
+             +---------------------+
+             |   EXPRESS.JS SERVER |
+             |       Node.js       |
+             +----------+----------+
+                        |
+           +------------+------------+
+           |                         |
+           v                         v
+ +--------------------+   +--------------------+
+ | AUTHENTICATION     |   | APPLICATION ROUTES |
+ | JWT Middleware     |   | Users / Services   |
+ | Registration       |   | Marketplace        |
+ | Role Verification  |   | Logistics          |
+ +--------------------+   +---------+----------+
+                                    |
+                                    v
+                          +--------------------+
+                          |      MODELS        |
+                          | Users / Meetings   |
+                          | Services / Transport|
+                          | Warehouses         |
+                          +---------+----------+
+                                    |
+                                    v
+                          +--------------------+
+                          |      MONGODB       |
+                          |   Data Persistence |
+                          +--------------------+
+```
+
+The architecture separates presentation, routing, business logic, authentication, and database operations into distinct components.
+
+---
+
+## Application Modules
+
+### Farmer Management
+
+Provides farmers with interfaces for accessing wool-related services, exploring market opportunities, and monitoring production-related activities.
+
+### Marketplace
+
+Enables users to interact with wool product listings and buying workflows.
+
+### Services
+
+Organizes services required throughout the wool industry, including processing, livestock care, logistics, and quality assessment.
+
+### Warehouse Management
+
+Supports warehouse-related data handling and user interactions.
+
+### Transportation Management
+
+Provides transportation-specific interfaces for coordinating wool movement.
+
+### Learning Platform
+
+Includes learning resources and session-related interfaces.
+
+### Statistics
+
+Provides a dedicated area for visualizing wool-related data and industry information.
+
+---
+
+## Project Structure
+
+```text
+KnitKraft/
+|
++-- app.js
++-- bin/
+|   +-- www
+|
++-- routes/
+|   +-- index.js
+|   +-- users.js
+|   +-- api.js
+|
++-- models/
+|   +-- Meeting.js
+|   +-- Service.js
+|   +-- Transport.js
+|   +-- Warehouse.js
+|   +-- userregister.js
+|
++-- src/
+|   +-- controllers/
+|   |   +-- auth.controller.js
+|   |   +-- user.controller.js
+|   |
+|   +-- middleware/
+|   |   +-- authJwt.js
+|   |   +-- verifySignUp.js
+|   |   +-- index.js
+|   |
+|   +-- db/
+|       +-- db.js
+|
++-- views/
+|   +-- farmer/
+|   +-- seller/
+|   +-- service/
+|   +-- transport/
+|   +-- warehouse/
+|   +-- teacher/
+|   +-- Learning/
+|   +-- Woolkart/
+|   +-- Services/
+|   +-- Statistics/
+|   +-- Pages/
+|   +-- input/
+|   +-- table/
+|   +-- partials/
+|
++-- lang/
+|   +-- eng.json
+|   +-- hin.json
+|
++-- public/
+|   +-- assets/
+|       +-- css/
+|       +-- js/
+|       +-- sass/
+|       +-- img/
+|
++-- screenshots/
+|   +-- download.gif
+|   +-- finalppt.png
+|   +-- logo.png
+|
++-- package.json
++-- package-lock.json
++-- .gitignore
++-- LICENSE
++-- README.md
+```
+
+---
+
+## Installation and Setup
+
+### Prerequisites
+
+Before running KnitKraft, ensure that the following are available:
+
+- Node.js and npm.
+- Git.
+- MongoDB database access.
+- Required environment variables.
+- A valid Mapbox public access token for map-related functionality.
+
+### Step 1 — Clone the Repository
+
+```bash
+git clone https://github.com/Mashielkhan/KnitKraft.git
+cd KnitKraft
+```
+
+### Step 2 — Install Dependencies
+
+```bash
+npm install
+```
+
+### Step 3 — Configure Environment Variables
+
+Create a `.env` file in the project root.
+
+The application configuration may require values for:
+
+```ini
+MAPBOX_PUBLIC_TOKEN=your_mapbox_public_token
+MONGODB_URI=your_mongodb_connection_string
+```
+
+Additional environment variables may be necessary for authentication, session management, and other services.
+
+The exact MongoDB and authentication variable names must match the code in the existing repository.
+
+Do not commit private credentials to version control.
+
+### Step 4 — Start the Application
+
+Run:
+
+```bash
+npm start
+```
+
+The application will start using the port and runtime configuration defined by the project.
+
+Check the terminal output for the local server address.
+
+### Step 5 — Open the Application
+
+Open the server URL in a web browser.
+
+The interface is intended to support mobile-friendly navigation.
+
+---
+
+## Application Workflow
+
+### Step 1 — Registration and Authentication
+
+Users create an account or sign in using the available authentication interface.
+
+### Step 2 — Role-Based Dashboard
+
+The application displays interfaces according to the user's role.
+
+For example, a farmer may access wool-related services while a logistics partner may access transportation workflows.
+
+### Step 3 — Service Exploration
+
+Users explore the services relevant to their activities, such as shearing, grading, veterinary care, or warehousing.
+
+### Step 4 — Wool Tracking
+
+Production activities can be represented through a structured process covering different wool-processing stages.
+
+### Step 5 — Trading and Marketplace Interaction
+
+Buyers and sellers can use marketplace interfaces to explore products and coordinate transactions.
+
+### Step 6 — Learning and Information
+
+Users can access educational resources and statistical information available within the platform.
+
+---
+
+## Business Value
+
+### For Farmers
+
+- Better access to buyers and service providers.
+- Greater visibility into wool-related processes.
+- Access to learning resources.
+- Improved awareness of industry activities.
+
+### For Buyers and Sellers
+
+- Centralized product discovery.
+- Easier communication.
+- More organized marketplace workflows.
+- Opportunities to connect with industry participants.
+
+### For Logistics and Warehousing Providers
+
+- Dedicated service interfaces.
+- Access to relevant logistics workflows.
+- Improved coordination opportunities.
+
+### For the Wool Industry
+
+- A more connected supply-chain ecosystem.
+- Improved digital accessibility.
+- Greater opportunities for traceability and information sharing.
+- Reduced dependence on fragmented manual processes.
+
+---
+
+## Engineering Highlights
+
+### Full-Stack Web Development
+
+KnitKraft integrates server-rendered interfaces with backend routing, middleware, data models, and database services.
+
+### Express.js Architecture
+
+Express organizes API routes and application endpoints while supporting reusable middleware.
+
+### MongoDB Data Models
+
+Dedicated models represent different application entities, including users, services, transport, warehouses, and meetings.
+
+### Role-Based Application Design
+
+Authentication and authorization modules provide a foundation for differentiated user access.
+
+### Server-Side Rendering
+
+EJS templates support dynamic page rendering using server-provided data.
+
+### Multilingual Support
+
+Separate language resources provide a foundation for displaying localized application content.
+
+### Responsive Interface Design
+
+Bootstrap, Sass, and reusable UI components support mobile-oriented interface layouts.
+
+---
+
+## Security and Configuration
+
+KnitKraft uses external services and may handle user account information.
+
+Important considerations include:
+
+- Store database credentials securely.
+- Avoid hardcoded API secrets.
+- Use appropriately restricted Mapbox public tokens.
+- Validate user input.
+- Protect authenticated routes.
+- Configure authorization according to user roles.
+- Avoid committing `.env` files.
+- Review dependencies and maintain security updates.
+- Use HTTPS in production.
+
+Public Mapbox tokens may be exposed to browsers by design, but should be configured and restricted appropriately.
+
+---
+
+## Current Scope and Future Improvements
+
+Potential enhancements include:
+
+- Improved real-time wool tracking.
+- Advanced marketplace search and filtering.
+- Secure payment and escrow integration.
+- Automated quality-assessment workflows.
+- More detailed warehouse inventory management.
+- Location-aware logistics optimization.
+- Real-time commodity pricing integrations.
+- Advanced analytics and reporting.
+- Additional language support.
+- Push notifications.
+- Enhanced mobile application support.
+- Supply-chain audit trails.
+- Cloud infrastructure improvements.
+
+These are potential improvements rather than confirmed current functionality.
+
+---
+
+## Development
+
+### Repository Maintainer
+
+**Mashiel Khan**
+BS Computer Science
+Full-Stack Development | Web Applications | Digital Platforms
+
+GitHub: [github.com/Mashielkhan](https://github.com/Mashielkhan)
+
+---
+
+## License
+
+See the repository's [LICENSE](LICENSE) file for the applicable license and attribution requirements.
+
+---
+
+## Project Vision
+
+KnitKraft demonstrates how a unified digital platform can improve coordination throughout agricultural and textile supply chains.
+
+By bringing together production tracking, service management, logistics, quality assessment, marketplace operations, and education, the platform explores opportunities for making the wool industry more connected, accessible, and transparent.
+
+**KnitKraft — Connecting the Wool Industry, From Farm to Fabric.**
